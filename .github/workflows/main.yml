@@ -20,7 +20,6 @@ jobs:
         -d parse_mode="Markdown" \
         --data-urlencode text="
         🚀 *Asv.Drones version $TAG_NAME Release Update!*
-        ```
-        We are excited to announce the release of version $TAG_NAME, packed with new features, improvements, and essential fixes to enhance your experience
-        ```
-        $RELEASE_DESC ${{ github.event.release.name }} ${{ github.event.release.html_url }} "
+        `We are excited to announce the release of version $TAG_NAME, packed with new features,`
+        `improvements, and essential fixes to enhance your experience` 
+        $RELEASE_DESC ${{ github.event.release.name }} [inline URL](${{ github.event.release.html_url }}) "
