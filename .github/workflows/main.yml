@@ -18,7 +18,7 @@ jobs:
         curl -X POST https://api.telegram.org/bot${{ env.TELEGRAM_BOT_TOKEN }}/sendMessage \
         -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
         -d parse_mode="Markdown" \
-        -d text="Asv.Drones version $TAG_NAME\n Release Update!\n\n We are excited to announce the release of version 1.0.1,
-        packed with new features, improvments, and essential fixes to enhance your experience\n\n 
-        $RELEASE_DESC\n\n ${{ github.event.release.name }}\n${{ github.event.release.html_url }}"
+        -d text="<b>Asv.Drones version $TAG_NAME Release Update!</b> <br><br>We are excited to announce the release of version 1.0.1,
+        packed with new features, improvments, and essential fixes to enhance your experience <br><br> 
+        $RELEASE_DESC <br><br> ${{ github.event.release.name }} <br> ${{ github.event.release.html_url }}"
 
