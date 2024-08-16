@@ -17,10 +17,11 @@ jobs:
       run: |
         curl -X POST https://api.telegram.org/bot${{ env.TELEGRAM_BOT_TOKEN }}/sendMessage \
         -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-        -d parse_mode="HTML" \
+        -d parse_mode="Markdown" \
         --data-urlencode text="
-        <b>Asv.Drones version $TAG_NAME Release Update!</b>
+        🚀 *Asv.Drones version $TAG_NAME Release Update!*
         ```
         We are excited to announce the release of version $TAG_NAME, packed with new features, improvements, and essential fixes to enhance your experience
         ```
-        <blockquote expandable> $RELEASE_DESC ${{ github.event.release.name }} ${{ github.event.release.html_url }} </blockquote>"
+        $RELEASE_DESC ${{ github.event.release.name }} ${{ github.event.release.html_url }} 
+        ``` "
