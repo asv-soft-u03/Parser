@@ -2,7 +2,7 @@ name: Notifier
 
 on:
   release:
-    branch:  main
+    types: [created]
 
 jobs:
 
