@@ -3,7 +3,9 @@ name: Notify on Release
 on:
   release:
     types: 
+      - created
       - published
+      - prereleased
 
 jobs:
   notify:
