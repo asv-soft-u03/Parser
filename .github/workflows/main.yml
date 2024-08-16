@@ -15,5 +15,5 @@ jobs:
       run: |
         curl -X POST https://api.telegram.org/bot${{ env.TELEGRAM_BOT_TOKEN }}/sendMessage \
         -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-        -d text="Новый релиз: AsvDrones v0.1.0.2  "
+        -d text="Новый релиз: ${{ github.event.release.name }} ${{ github.event.release.html_url }}" "
 
